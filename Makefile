@@ -10,7 +10,8 @@ LIB := $(BUILD_DIR)/libbecomposekit.a
 
 SOURCES := \
 	src/BeComposeKit.cpp \
-	src/BeCommand.cpp
+	src/BeCommand.cpp \
+	src/BeCommandRegistry.cpp
 
 OBJECTS := $(SOURCES:src/%.cpp=$(BUILD_DIR)/%.o)
 
@@ -32,6 +33,8 @@ check: all
 	$(BUILD_DIR)/version_smoke
 	$(CXX) $(CXXFLAGS) tests/becommand_smoke.cpp $(LIB) $(LDLIBS) -o $(BUILD_DIR)/becommand_smoke
 	$(BUILD_DIR)/becommand_smoke
+	$(CXX) $(CXXFLAGS) tests/becommand_registry_smoke.cpp $(LIB) $(LDLIBS) -o $(BUILD_DIR)/becommand_registry_smoke
+	$(BUILD_DIR)/becommand_registry_smoke
 
 clean:
 	rm -rf $(BUILD_DIR)

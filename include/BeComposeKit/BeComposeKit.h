@@ -2,6 +2,7 @@
 #define BECOMPOSEKIT_BECOMPOSEKIT_H
 
 #include <BeComposeKit/BeCommand.h>
+#include <BeComposeKit/BeCommandRegistry.h>
 
 #define BECOMPOSEKIT_VERSION_MAJOR 0
 #define BECOMPOSEKIT_VERSION_MINOR 1
